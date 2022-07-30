@@ -1,34 +1,35 @@
-package main // Progams relatd to console based
+package main
 
-import "fmt" // Library which contains functions related to format strings and print them in the console
+import "fmt"
 
 func main() {
-	// string
-	var name string = "Isuru"
-	var name2 string
-	name3 := "Harischandra"
-	fmt.Println(name, name2, name3)
+	/* Arrays */
+	var numbers1 [3]int8 = [3]int8{10, 20, 30}
+	fmt.Println(numbers1, len(numbers1))
 
-	// int
-	var num1 int = 234
-	var num2 int8 = 21
-	var num3 int16 = -3863
-	var num4 int32 = 379322
-	var num5 int64
-	num6 := 3343
-	fmt.Println(num1, num2, num3, num4, num5, num6)
+	var numbers2 = [2]int16{40, 50}
+	fmt.Println(numbers2, len(numbers2))
 
-	// uint (unsigned int - Doesn't contain negative values)
-	var unum1 uint = 234
-	var unum2 uint8 = 21
-	var unum3 uint16 = 3863
-	var unum4 uint32 = 379322
-	var unum5 uint64
-	fmt.Println(unum1, unum2, unum3, unum4, unum5)
+	numbers3 := [5]int32{60, 70, 80, 90, 100}
+	fmt.Println(numbers3, len(numbers3))
 
-	// float
-	var fnum1 float32 = 29732.2324
-	var fnum2 float64 = -3023902.23
-	fnum3 := 323.23
-	fmt.Println(fnum1, fnum2, fnum3)
+	numbers4 := [5]int64{2, 4, 6, 8}
+	fmt.Println(numbers4, len(numbers4))
+
+	names := [3]string{"Isuru", "Vihan", "Harischandra"}
+	names[1] = "VIHAN"
+	fmt.Println(names, len(names))
+
+	/* Slices */
+	var scores = []int{100, 200, 300}
+	scores = append(scores, 400, 500) // Appending
+	fmt.Println(scores, len(scores))
+
+	// Slice ranges
+	rangeOne := scores[:3]
+	rangeTwo := scores[1:4]
+	rangeThree := scores[2:]
+	fmt.Println(rangeOne)
+	fmt.Println(rangeTwo)
+	fmt.Println(rangeThree)
 }
